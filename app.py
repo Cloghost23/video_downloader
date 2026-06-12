@@ -12,7 +12,11 @@ if st.button("Download"):
             ydl_opts = {
                 'outtmpl': os.path.join(tmpdir, '%(title)s.%(ext)s'),
                 'format': 'bestvideo + bestaudio',
-                'noplaylist': True
+                'noplaylist': True,
+                'merge_output_format': 'mp4',
+                'ffmpeg': 'usr/bin/ffmpeg',
+                'quiet': False,
+                'no_warnings': True
             }
 
             
